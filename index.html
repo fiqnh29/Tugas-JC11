@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tugas HTML</title>
+    </head>
+    <body>
+        <form id="form">
+            <h3>1. Siapa presiden kedua?</h3>
+            <input type="radio" name="q1" value="1a">a. Soekarno</input>
+            <input type="radio" name="q1" value="1b">b. BJ Habibie </input>
+            <input type="radio" name="q1" value="1c">c. Jokowi</input>
+            <input type="radio" name="q1" value="1d">d. Soeharto</input>
+            <br>
+            <h3>2. 2 + 25 x 2=</h3>
+            <input type="radio" name="q2" value="2a">a. 29</input>
+            <input type="radio" name="q2" value="2b">b. 52</input>
+            <input type="radio" name="q2" value="2c">c. 25</input>
+            <input type="radio" name="q2" value="2d">d. 54</input>
+            <br>
+            <h3>3. Siapa Pendiri Microsoft?</h3>
+            <input type="radio" name="q3" value="3a">a. Warrent Buffet</input>
+            <input type="radio" name="q3" value="3b">b. Bill Gates</input>
+            <input type="radio" name="q3" value="3c">c. Mark Zuckerberg</input>
+            <input type="radio" name="q3" value="3d">d. jeff bezos</input>
+            <br>
+            <h3>4. Apa Ibu Kota Jerman?</h3>
+            <input type="radio" name="q4" value="4a">a. Manila</input>
+            <input type="radio" name="q4" value="4b">b. Canberra</input>
+            <input type="radio" name="q4" value="4c">c. Berlin</input>
+            <input type="radio" name="q4" value="4d">d. Sidney</input>
+            <br><br>
+            <input id="btn" type="button" value="Submit" onclick="functionH()">
+            <h1 id="nilai">Nilai akhir Anda =</h1>
+        </form>
+            
+        <script>
+            function functionH(){
+                var form = document.getElementById('form')
+                var hsl = 0
+                for(var i=0; i<form.length; i++){
+                    if(form[i].checked){
+                        if (form[i].value === '1d' || form[i].value === '2b' || form[i].value === '3b' || form[i].value === '4c' ) {
+                            hsl += 25
+                        }
+                    }
+                }
+                document.getElementById('nilai').innerHTML= 'Nilai akhir Anda = '+hsl
+            }
+        </script>   
+    </body>
+</html>
